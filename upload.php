@@ -1,10 +1,10 @@
 <?php
-	if(isset($_FILES['image'])){
+	if(isset($_FILES['upfile'])){
 		$errors= array();
-		$file_name = $_FILES['image']['name'];
-		$file_size = $_FILES['image']['size'];
-		$file_tmp = $_FILES['image']['tmp_name'];
-		$file_type = $_FILES['image']['type'];
+		$file_name = $_FILES['upfile']['name'];
+		$file_size = $_FILES['upfile']['size'];
+		$file_tmp = $_FILES['upfile']['tmp_name'];
+		$file_type = $_FILES['upfile']['type'];
 
 	if($file_size > 2097152) {
 		$errors[]='File size must be excately 2 MB';
