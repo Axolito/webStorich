@@ -62,6 +62,7 @@ session_start();
 					else{
 						if (($_POST["mdp"] === $mdp) and ($_POST["user"] === $user)){
 							$_SESSION["connecte"] = 1;
+							$_SESSION["user"] = $user;
 							include("fexplo.php");
 							echo '<form action="deco.php" method="post">';
 							echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';

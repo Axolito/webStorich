@@ -28,8 +28,8 @@ session_start();
 
 			<div class="formul">
 				<form action="singed.php" method="post">
-					Identifiant : <br><input type="text" name="user"><br>
-					Mot de pass : <br><input type="password" name="mdp"><br>
+					Identifiant : <br><input class="text" type="text" name="user"><br>
+					Mot de pass : <br><input class="text" type="password" name="mdp"><br>
 					<button type="submit" class="lienhub" style="margin-top: 15px;">Se connecter</button>
 				</form>
 			</div>

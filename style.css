@@ -25,6 +25,7 @@ h1
 	text-align: center;
 	align-content: center;
 	margin-top: 51px;
+	padding-bottom: 30px;
 }
 
 .lien
@@ -51,6 +52,56 @@ h1
 .divdelien
 {
 	margin-bottom: 35px;
+}
+
+.lienhub
+{
+	background-color: #19405a;
+	padding: 10px 16px;
+	cursor: pointer;
+	border: none;
+	text-align: left;
+	width: auto;
+
+	color: #f2f2f2;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	text-decoration-line: none;
+	text-decoration: none;
+}
+
+.lienhub:hover
+{
+	background-color: #ddd;
+	color: black;
+}
+
+
+.formul
+{
+	margin-left: 30%;
+	margin-right: 30%;
+	/*margin-bottom: 40px;*/
+	padding: 15px;
+	background-color: grey;
+	border-radius: 15px;
+
+	color: white;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+.text
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 10%;
+	padding-right: 10%x;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
