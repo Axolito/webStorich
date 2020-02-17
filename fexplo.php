@@ -12,3 +12,16 @@
 
 	<input type="submit" value="Supprimer">
 </FORM>
+
+
+<html>
+   <body>
+      
+      <form action = "upload.php" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "image" />
+         <input type = "submit"/>
+			
+      </form>
+      
+   </body>
+</html>
