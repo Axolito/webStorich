@@ -16,9 +16,11 @@ session_start();
 		<div id="carte">
 			<?php
 			if ($_SESSION["connecte"] == 1){
-				echo "<script type='text/javascript'>";
+				/*echo "<script type='text/javascript'>";
 				echo "window.location.replace('singed.php')";
-				echo "</script>";					
+				echo "</script>";*/
+
+				header('Location: singed.php');
 				}
 			?>
 

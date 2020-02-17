@@ -5,8 +5,14 @@
 		$_SESSION["connecte"] = 0;
 	}
 	echo $_SESSION["connecte"];
+	// header() renvoit sur une autre page
+    header('Location: index.php');
 ?>
 
+
+<!--
 <script type="text/javascript">
 	window.location.replace("index.php");
 </script>
+
+-->
