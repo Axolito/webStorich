@@ -8,3 +8,4 @@ The simplicity of webStorich makes it possible to show students how it works and
 
 ## Important
 But for the moment webStorich is very... empty and ugly, I'll try to make a version of it almost usable quickly.
+In this branch, a **very dangerous** authentication system has been added as well as a style sheet.
