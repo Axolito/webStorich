@@ -18,7 +18,7 @@ session_start();
 				if (((empty($_POST["user"]))or((empty($_POST["mdp"]))))and $_SESSION["connecte"] == 0)
 				{
 					echo "<h1>Vous ne pouvez pas laisser les champs vide !</h1>";
-					echo '<p class="plienhub"><a href="index.php" class="lienhub">Retour</a></p>';
+					echo '<p class="plienhub"><a href="singin.php" class="lienhub">Retour</a></p>';
 				}
 				else
 				{
@@ -55,15 +55,21 @@ session_start();
 
 					if ($_SESSION["connecte"] == 1){
 						include("fexplo.php");
+						echo '<form action="deco.php" method="post">';
+						echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
+						echo '</form>';
 					}
 					else{
 						if (($_POST["mdp"] === $mdp) and ($_POST["user"] === $user)){
 							$_SESSION["connecte"] = 1;
 							include("fexplo.php");
+							echo '<form action="deco.php" method="post">';
+							echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
+							echo '</form>';
 						}
 						else{
 							echo ("<h1>Il y a une erreur !</h1>");
-							echo '<p class="plienhub"><a href="index.php" class="lienhub">Retour</a></p>';
+							echo '<p class="plienhub"><a href="singin.php" class="lienhub">Retour</a></p>';
 						}
 					}
 				}
