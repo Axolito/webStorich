@@ -1,15 +1,21 @@
 <?php
+	/*echo $_POST["file"];
+	$locationfile = "./".$_SESSION["user"]."/".$_POST["file"];
+	echo $locationfile;
+	echo $d;
+*/
+
 	session_start();
 
 	var_dump($_POST["file"]);
 
-	// affiche le contenu de la session
-	var_dump($_SESSION);
-
 	// récupére le chemin du dossier actuel (celui de ce script)
 	$path = dirname(__FILE__).'/';
 
-	$locationfile = $path.$_SESSION["user"].'/'.$_POST["file"];
+	// affiche le contenu de la session
+	var_dump($_SESSION);
+
+	$locationfile = './'.$_SESSION["user"].'/'.$_POST["file"];
 
 	var_dump($locationfile);
 
@@ -20,15 +26,15 @@
 		die();
 	}
 
-	if (is_dir($locationfile)) {
+	if (is_dir($_SESSION["user"]."/".$_POST["file"])) {
 		rmdir ($_SESSION["user"]."/".$_POST["file"]);
 	}
 	else {
-		unlink($locationfile);
+		unlink($_SESSION["user"]."/".$_POST["file"]);
 	}
 
 	// header() renvoit sur une autre page
-    //header('Location: singed.php');
+    header('Location: singed.php');
 ?>
 
 <!--
