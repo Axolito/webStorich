@@ -14,10 +14,15 @@
 		<input type="submit" value="Supprimer" class="lienhub">
 	</form>
 
-	      
-	<form action = "upload.php" method = "POST" enctype = "multipart/form-data">
-		<input type = "file" name = "upfile"/>
-		<input type = "submit" class="lienhub"/>	
-	</form>
+
+
+	<div class="divupload">
+		<h3 class="titleup">Upload de fichier</h3>
+		<form action = "upload.php" method = "POST" enctype = "multipart/form-data">
+			<input type = "file" name = "upfile"/>
+			<input type = "submit" class="lienhub" value="Uploader" />	
+		</form>
+	</div>
+		
 </div>
 

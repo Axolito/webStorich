@@ -26,6 +26,7 @@ h1
 	align-content: center;
 	margin-top: 51px;
 	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 .lien
@@ -121,12 +122,27 @@ h1
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 
 	text-align: left;
 	align-content: left;
+	border-radius: 20px;
 }
 
+.divupload
+{
+	background-color: #282828;
+	color: white;
+	padding: 10px 20px;
+	margin-top: 20px;
+	border-radius: 20px;
+}
+
+.titleup
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
 
 

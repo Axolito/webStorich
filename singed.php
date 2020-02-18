@@ -34,23 +34,29 @@ session_start();
 					}
 					//echo "Connected successfully";
 
-					$truc = $_POST["user"];
 
-					$sql = "SELECT id, mdp FROM user WHERE id='$truc'";
-					$result = $conn->query($sql);
+					if (!empty($_POST["user"])) {
+						$truc = $_POST["user"];
+						$sql = "SELECT id, mdp FROM user WHERE id='$truc'";
+						$result = $conn->query($sql);
 
-					if ($result->num_rows > 0) {
-					    // output data of each row
-					    while($row = $result->fetch_assoc()) {
-					        //echo $row["id"], $row["mdp"];
-					        $user = $row["id"];
-					        $mdp = $row["mdp"];
-					    }
-					} else {
-					    //echo "0 results";
-					    $user = 0;
-					    $mdp = 0;
+						if ($result->num_rows > 0) {
+						    // output data of each row
+						    while($row = $result->fetch_assoc()) {
+						        //echo $row["id"], $row["mdp"];
+						        $user = $row["id"];
+						        $mdp = $row["mdp"];
+						    }
+						} else {
+						    //echo "0 results";
+						    $user = 0;
+						    $mdp = 0;
+						}
 					}
+						
+
+					
+
 
 
 					if ($_SESSION["connecte"] == 1){
