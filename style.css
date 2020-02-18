@@ -108,16 +108,55 @@ h1
 
 
 
+.fexplo
+{
+	background-color: #d6d6d6;
+
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	text-align: left;
+	align-content: left;
+}
 
 
 
 
 
-#wsicone
+
+
+
+
+.wsicone
 {
 	width: 47px;
 	padding: 2px;
 	float: left;
+}
+
+.gticone
+{
+	height: 33px;
+}
+
+.aiconnavbarre
+{
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	padding: 7px 8px;
+}
+
+.aiconnavbarre:hover {
+  background: #ddd;
 }
 
 /* The navigation bar */
@@ -130,7 +169,7 @@ h1
 }
 
 /* Links inside the navbar */
-.navbar a {
+.anavbar {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -141,7 +180,7 @@ h1
 }
 
 /* Change background on mouse-over */
-.navbar a:hover {
+.anavbar:hover {
   background: #ddd;
   color: black;
 }
