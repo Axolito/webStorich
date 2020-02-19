@@ -3,9 +3,11 @@
 	$locationfile = "./".$_SESSION["user"]."/".$_POST["file"];
 	echo $locationfile;
 	echo $d;
-*/
+	*/
+
+	session_start();
+
 	if (!empty($_POST["file"])) {
-		session_start();
 
 		var_dump($_POST["file"]);
 

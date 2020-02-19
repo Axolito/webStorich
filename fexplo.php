@@ -2,16 +2,17 @@
 	<form name="form1" action="delete.php" method="post">
 
 		<?php
+			$locationfile = './'.$_SESSION["user"].'/';
 			$d = dir("./".$_SESSION["user"]."/");
 			while($entry = $d->read()) {
 				if ((($entry == ".") or ($entry == ".."))==0){
-					echo "<input type='radio' id='file' name='file' value='" . $entry ."'>".$entry."<br>";
+					echo "<input type='radio' id='file' name='file' value='" . $entry ."'>"."<a class='filelink' href= '".$locationfile.$entry."'>".$entry."</a>"."<br>";
 					}
 				}
 			$d->close();
 		?>
 
-		<input type="submit" value="Supprimer" class="lienhub">
+		<input type="submit" value="Supprimer" class="lienhub margetop">
 	</form>
 
 
@@ -25,4 +26,3 @@
 	</div>
 		
 </div>
-
