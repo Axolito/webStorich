@@ -15,16 +15,18 @@ session_start();
 	<body>
 		<div id="carte">
 			<?php
-			if ($_SESSION["connecte"] == 1){
-				/*echo "<script type='text/javascript'>";
-				echo "window.location.replace('singed.php')";
-				echo "</script>";*/
+				if (!empty($_SESSION["connecte"])) {
+					if ($_SESSION["connecte"] == 1){
+						/*echo "<script type='text/javascript'>";
+						echo "window.location.replace('singed.php')";
+						echo "</script>";*/
 
-				header('Location: singed.php');
+						header('Location: singed.php');
+					}
 				}
 			?>
 
-			<h1>Vous devez être connecté pour accéder au hub des tests</h1>
+			<h1 class="hsanstop">Vous devez être connecté pour accéder a l'interface de gestion</h1>
 
 			<div class="formul">
 				<form action="singed.php" method="post">

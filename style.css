@@ -12,9 +12,14 @@ p
 	margin-right: 20px;
 }
 
-h1
+/*h1
 {
 	margin-top: 20px;
+}*/
+
+.hsanstop
+{
+	margin-top: 0px;
 }
 
 #carte
@@ -103,6 +108,8 @@ h1
 	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	border: 2px solid black;
+	border-color: #4a4a4a;
 }
 
 
@@ -129,6 +136,22 @@ h1
 	border-radius: 20px;
 }
 
+.cadrefexplo
+{
+	border: 3px solid black;
+	border-color: grey;
+}
+
+.fexplolinei
+{
+	/*background-color: #adadad;*/
+}
+
+.fexplolined
+{
+	background-color: #adadad;
+}
+
 .filelink
 {
 	font-size: 20px;
@@ -142,7 +165,7 @@ h1
 
 .margetop
 {
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 .divupload

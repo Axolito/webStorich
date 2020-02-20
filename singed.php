@@ -37,7 +37,7 @@ session_start();
 
 					if (!empty($_POST["user"])) {
 						$truc = $_POST["user"];
-						$sql = "SELECT id, mdp FROM user WHERE id='$truc'";
+						$sql = "SELECT id, mdp, level FROM user WHERE id='$truc'";
 						$result = $conn->query($sql);
 
 						if ($result->num_rows > 0) {
@@ -46,38 +46,62 @@ session_start();
 						        //echo $row["id"], $row["mdp"];
 						        $user = $row["id"];
 						        $mdp = $row["mdp"];
+						        $level = $row["level"];
 						    }
 						} else {
 						    //echo "0 results";
 						    $user = 0;
 						    $mdp = 0;
+						    $level = 0;
 						}
 					}
-						
+					$conn->close();
 
-					
-
-
+					//var_dump($_SESSION["level"]);
 
 					if ($_SESSION["connecte"] == 1){
 						include("fexplo.php");
-						echo '<form action="deco.php" method="post">';
-						echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
-						echo '</form>';
-					}
-					else{
-						if (($_POST["mdp"] === $mdp) and ($_POST["user"] === $user)){
-							$_SESSION["connecte"] = 1;
-							$_SESSION["user"] = $user;
-							include("fexplo.php");
+						
+						if ($_SESSION["level"] == 1) {
+							include("userexplo.php");
+							//die();
 							echo '<form action="deco.php" method="post">';
 							echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
 							echo '</form>';
 						}
 						else{
+							echo '<form action="deco.php" method="post">';
+							echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
+							echo '</form>';
+						}
+					}
+					else{
+						if (($_POST["mdp"] === $mdp) and ($_POST["user"] === $user)){
+							$_SESSION["connecte"] = 1;
+							$_SESSION["level"] = $level;
+							$_SESSION["user"] = $user;
+							include("fexplo.php");
+
+							if ($_SESSION["level"] == 1) {
+								include("userexplo.php");
+								//die();
+								echo '<form action="deco.php" method="post">';
+								echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
+								echo '</form>';
+							}
+							else{
+								echo '<form action="deco.php" method="post">';
+								echo '<button type="submit" class="lienhub" name="deco" value="1">Se déconnecter</button>';
+								echo '</form>';
+							}
+						}
+						else{
 							echo ("<h1>Il y a une erreur !</h1>");
 							echo '<p class="plienhub"><a href="singin.php" class="lienhub">Retour</a></p>';
 						}
+
+						// header() renvoit sur une autre page
+						//header('Location: singed.php');
 					}
 				}
 			?>
