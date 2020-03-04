@@ -1,5 +1,23 @@
+<?php
+/*
+ * webStorich
+ * An ultra-light web page manager for HTML courses 
+ *
+ * https://github.com/Axolito/webStorich/
+ *
+ * (c) 2020 Axolito - https://github.com/Axolito
+ *
+ * license GNU AGPL v3.0
+ * [en] https://www.gnu.org/licenses/agpl-3.0.html
+ * [fr] https://www.gnu.org/licenses/agpl-3.0.en.html
+ */
+?>
 <div class="fexplo">
 	<form name="form1" action="delete.php" method="post">
+
+		<?php
+			echo "<h3 class='hsanstop'>Gestion des fichiers pour le dossier : ".$_SESSION["user"]."</h3>";
+		?>
 
 		<div class="cadrefexplo">
 			<?php
@@ -20,6 +38,11 @@
 					$nombre = $nombre + 1;
 					}
 				}
+
+				if ($nombre == 0) {
+					echo "<h4>Il n'y a aucun fichier !</h4>";
+				}
+
 				$d->close();
 			?>
 		</div>

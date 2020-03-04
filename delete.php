@@ -1,4 +1,17 @@
 <?php
+	/*
+	 * webStorich
+	 * An ultra-light web page manager for HTML courses 
+	 *
+	 * https://github.com/Axolito/webStorich/
+	 *
+	 * (c) 2020 Axolito - https://github.com/Axolito
+	 *
+	 * license GNU AGPL v3.0
+	 * [en] https://www.gnu.org/licenses/agpl-3.0.html
+	 * [fr] https://www.gnu.org/licenses/agpl-3.0.en.html
+	 */
+
 	/*echo $_POST["file"];
 	$locationfile = "./".$_SESSION["user"]."/".$_POST["file"];
 	echo $locationfile;

@@ -1,0 +1,19 @@
+.carte-start
+{
+	width: 40%;
+	margin: 0 auto;
+	background-color: white;
+	text-align: center;
+	align-content: center;
+	margin-top: 100px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+	border-radius: 20px;
+	box-shadow: 10px 10px 15px 5px #585858;
+}
+
+.nodisplaylevel
+{
+	display: none;
+}
