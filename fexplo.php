@@ -16,7 +16,7 @@
 	<form name="form1" action="delete.php" method="post">
 
 		<?php
-			echo "<h3 class='hsanstop'>Gestion des fichiers pour le dossier : ".$_SESSION["user"]."</h3>";
+			echo "<h3 class='hsanstop'>Gestion des fichiers pour le dossier : <a class='filelink' href=/".$_SESSION["user"].">".$_SESSION["user"]."</a></h3>";
 		?>
 
 		<div class="cadrefexplo">
