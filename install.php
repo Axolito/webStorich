@@ -49,38 +49,48 @@ if (!empty($_POST["id"])) {
 		}
 	}
 
-	$config_file = fopen("config.php", "w");
-	$txt = "<?php\n";
-	fwrite($config_file, $txt);
+	$conn = mysqli_connect($servername, $username, $password, "webstorich");
+	// Check connection
+	if (!$conn) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
 
-	$txt = "$"."servername = '" . $servername . "';\n";
-	fwrite($config_file, $txt);
+	else {
 
-	$txt = "$"."username = '" . $username . "';\n";
-	fwrite($config_file, $txt);
+		$config_file = fopen("config.php", "w");
+		$txt = "<?php\n";
+		fwrite($config_file, $txt);
 
-	$txt = "$"."password = '" . $password . "';\n";
-	fwrite($config_file, $txt);
+		$txt = "$"."servername = '" . $servername . "';\n";
+		fwrite($config_file, $txt);
 
-	$txt = "$"."dbname = 'webstorich';\n";
-	fwrite($config_file, $txt);
+		$txt = "$"."username = '" . $username . "';\n";
+		fwrite($config_file, $txt);
+
+		$txt = "$"."password = '" . $password . "';\n";
+		fwrite($config_file, $txt);
+
+		$txt = "$"."dbname = 'webstorich';\n";
+		fwrite($config_file, $txt);
 
 
-	$txt = "?>";
-	fwrite($config_file, $txt);
+		$txt = "?>";
+		fwrite($config_file, $txt);
 
-	fclose($config_file);
+		fclose($config_file);
 
-	// Create connection
-	$conn = mysqli_connect($servername, $username, $password);
-	// sql to create table
-	$sql = "CREATE TABLE `webstorich`.`user` ( `id` TEXT NOT NULL , `mdp` TEXT NOT NULL , `level` INT NOT NULL ) ENGINE = InnoDB";
-	mysqli_query($conn, $sql);
+		// Create connection
+		$conn = mysqli_connect($servername, $username, $password);
+		// sql to create table
+		$sql = "CREATE TABLE `webstorich`.`user` ( `id` TEXT NOT NULL , `mdp` TEXT NOT NULL , `level` INT NOT NULL ) ENGINE = InnoDB";
+		mysqli_query($conn, $sql);
 
-	mysqli_close($conn);
-	//echo "coucou";
+		mysqli_close($conn);
+		//echo "coucou";
 
-	$db_iscreate = 1;
+		$db_iscreate = 1;
+
+	}
 }
 
 ?>
