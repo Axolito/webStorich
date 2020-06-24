@@ -7,7 +7,7 @@ webStorich is a small, unpretentious project aimed at simplifying the management
 The simplicity of webStorich makes it possible to show students how it works and to explain what free software is.
 
 ## Installation
-To install webStorich, simply copy the directory at the root of a PHP-compatible web server and access via a web browser to "config.php". There you have to fill in the database server information and create the administrator account.
+To install webStorich, simply copy the directory at the root of a PHP-compatible web server and access via a web browser to "install.php". There you have to fill in the database server information and create the administrator account.
 
 ![webStorich capture](/Capture8.PNG)
 
