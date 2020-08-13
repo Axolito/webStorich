@@ -30,7 +30,7 @@
 			</p>
 			<img src="illustration.png" class="imgaboutus">
 			<p>
-				webStorich est un petit projet sans prétention visant à simplifier la gestion de plusieurs petits sites en HTML par les étudiants. La simplicité de webStorich permet de montrer aux élèves son fonctionnement et d'expliquer ce qu'est un logiciel libre.<br>
+				webStorich est un petit projet sans prétention visant à simplifier la gestion de plusieurs petits sites en HTML par les étudiants. La simplicité du code de webStorich permet de le montrer aux élèves et ainsi de faire comprendre son fonctionnement et d'expliquer ce qu'est un logiciel libre.<br>
 				<br>
 				webStorich est principalement développé par Axel BRUA mais aussi par des contributeurs sur <a href="https://github.com/Axolito/webStorich">GitHub</a>.<br>
 				<br>
